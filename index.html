@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div
+      class="searchbox hidden-xs hidden-sm"
+      data-track-component="Find your right car"
+    >
+      <h1>Find your right car</h1>
+      <div class="">
+        <div class="gsc_ta_scroll">
+          <ul class="gsc-ta-clickWrap" data-track-section="tab">
+            <li title="New Car" class="gsc-ta-active">New Car</li>
+            
+          </ul>
+        </div>
+        <div class="contentHold gsc_row">
+          <div
+            data-track-section="New Car"
+            class="gsc-ta-content gsc-ta-active"
+          >
+            <div class="radiobutton">
+              <!-- <div class="gs_control">
+                <label class="gs_radio hover"
+                  ><input
+                    name="newcar"
+                    data-gsv-type="required"
+                    title="By Budget"
+                    data-gsf-name="radio"
+                    type="radio"
+                    value="new_budget"
+                    checked=""
+                  /><span class="gs_control__indicator"></span>
+                  <i>By Budget</i></label
+                >
+              </div> -->
+              <div class="gs_control">
+                <label class="gs_radio hover"
+                  ><input
+                    name="newcar"
+                    data-gsv-type="required"
+                    title="By Brand"
+                    data-gsf-name="radio"
+                    type="radio"
+                    value="new_brand"
+                  /><span class="gs_control__indicator"></span
+                  ><i>By Brand</i></label
+                >
+              </div>
+            </div>
+            <div class="modelname" id="new_budget">
+              <div class="">
+                <form action="submit.php" method="POST">
+                  <div class="carNames">
+                    <div class="column">
+                        <label for="hatchback">
+                            <input type="checkbox" name="car_type[]" value="Hatchback" id="hatchback">
+                            Hatchback
+                        </label>
+                        <label for="sedan">
+                            <input type="checkbox" name="car_type[]" value="Sedan" id="sedan">
+                            Sedan
+                        </label>
+                        <label for="suv">
+                            <input type="checkbox" name="car_type[]" value="SUV" id="suv">
+                            SUV
+                        </label>
+                    </div>
+                    <!-- <div class="column">
+                        <label for="hatchback">
+                            <input type="checkbox" name="car_type[]" value="Hatchback" id="hatchback">
+                            Hatchback
+                        </label>
+                        <label for="sedan">
+                            <input type="checkbox" name="car_type[]" value="Sedan" id="sedan">
+                            Sedan
+                        </label>
+                        <label for="suv">
+                            <input type="checkbox" name="car_type[]" value="SUV" id="suv">
+                            SUV
+                        </label>
+                    </div> -->
+                </div>
+                
+                 
+                  <h2>Car Price Range:</h2>
+                  <label for="price_min">Minimum Price:</label>
+                  <input type="number" name="price_min" id="price_min" min="0" required>
+              
+                  <label for="price_max">Maximum Price:</label>
+                  <input type="number" name="price_max" id="price_max" min="0" required>
+                 
+          
+
+                  <h2>Contact Information:</h2>
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" id="name" required>
+                  
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" name="phone" id="phone" required>
+                  
+                  <label for="email">Email ID:</label>
+                  <input type="email" name="email" id="email" required>
+                  
+                  <label for="address">Address:</label>
+                  <textarea name="address" id="address" required></textarea>
+                  
+                  <input type="submit" value="Submit">
+              </form>
+              </div>
+            </div>
+            <div class="modelname hide" id="new_brand">
+              <div data-track-component="brandmodelfilter">
+                <div class=" ">
+                  <ul>
+                    <li class="" data-gsmtl-container="true">
+                      <div
+                        class="ReactTypeahead inputfield gs_ta customSelect"
+                        data-gsmtl-container="true"
+                      >
+                        <input
+                          type="text"
+                          id="bmvBrand"
+                          data-id="bmvBrand"
+                          name="bmvBrand1c4a4842c97c5"
+                          maxlength="50"
+                          data-gsv-type="required"
+                          data-gsv-min-length="50"
+                          data-gsf-name="bmvBrand"
+                          placeholder="Select Brand"
+                          data-type="bmvBrand"
+                          aria-label="Select City"
+                          data-move-top="0"
+                          autocomplete="new-password"
+                          class=""
+                          value=""
+                        />
+                      </div>
+                    </li>
+                    <li class="" data-gsmtl-container="true">
+                      <div
+                        class="ReactTypeahead inputfield gs_ta customSelect"
+                        data-gsmtl-container="true"
+                      >
+                        <input
+                          type="text"
+                          id="bmvModel"
+                          data-id="bmvModel"
+                          name="bmvModel8b31590731d6"
+                          maxlength="50"
+                          data-gsv-type="required"
+                          data-gsv-min-length="50"
+                          data-gsf-name="bmvModel"
+                          placeholder="Select Model"
+                          data-type="bmvModel"
+                          aria-label="Select City"
+                          data-move-top="0"
+                          autocomplete="new-password"
+                          class=""
+                          value=""
+                        />
+                      </div>
+                    </li>
+                    <li class="">
+                      <button class="button" name="go" type="submit">
+                        Search
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a title="" href="/filter/new-cars"
+              ><div class="nextgen">
+                <span></span></div
+            ></a>
+          </div>
+          <div data-track-section="Used Car" class="gsc-ta-content">
+            <!-- <div class="radiobutton">
+              <div class="gs_control">
+                <label class="gs_radio hover"
+                  ><input
+                    name="usedcar"
+                    data-gsv-type="required"
+                    title="By Budget"
+                    data-gsf-name="radio"
+                    type="radio"
+                    value="used_budget"
+                    checked=""
+                  /><span class="gs_control__indicator"></span>
+                  <i>By Budget</i></label
+                >
+              </div> -->
+              <div class="gs_control">
+                <label class="gs_radio hover"
+                  ><input
+                    name="usedcar"
+                    data-gsv-type="required"
+                    title="By Model"
+                    data-gsf-name="radio"
+                    type="radio"
+                    value="used_model"
+                  /><span class="gs_control__indicator"></span
+                  ><i>By Model</i></label
+                >
+              </div>
+            </div>
+            <div class="modelname" id="used_budget">
+              <div class="">
+                <!-- <ul>
+                  <input />
+                  <li class="" data-gsmtl-container="true">
+                    <div
+                      class="ReactTypeahead inputfield gs_ta customSelect"
+                      data-gsmtl-container="true"
+                    >
+                      <input
+                        type="text"
+                        id="ucBudget"
+                        data-id="ucBudget"
+                        name="undefinedad19d274c5115"
+                        maxlength="50"
+                        data-gsv-type="required"
+                        data-gsv-min-length="50"
+                        placeholder="Select Budget"
+                        aria-label="Select City"
+                        data-move-top="0"
+                        autocomplete="new-password"
+                        class=""
+                        readonly=""
+                        value=""
+                      />
+                      
+                      
+                    </div>
+                    
+                  </li>
+                  
+                  <li class="" data-gsmtl-container="true">
+                    <div class="">
+                      <div class="posR">
+                        <i class="LocIcon zindex1 hide"></i
+                        ><i class="icon-cd-write-a-comment hide"></i>
+                        <div
+                          class="gs_ta smallInput"
+                          data-track-section="Search by city"
+                        >
+                          <div
+                            class="ReactTypeahead inputfield gs_ta customSelect"
+                            data-gsmtl-container="true"
+                          >
+                            <input
+                              type="text"
+                              id="budCityName"
+                              data-id="budCityName"
+                              name="cityName41651760c94e5"
+                              maxlength="50"
+                              data-gsv-type="required"
+                              data-gsv-min-length="50"
+                              data-gsf-name="cityName"
+                              placeholder="Select City"
+                              data-type="cityName"
+                              aria-label="Select City"
+                              data-move-top="0"
+                              autocomplete="new-password"
+                              class=""
+                              value=""
+                            />
+                          </div>
+                          <div
+                            data-typeahead-container="budCityName"
+                            class="typeHeadContainer gs_ta_header"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="">
+                    <button class="button" name="go" type="submit">
+                      Search
+                    </button>
+                  </li>
+                </ul> -->
+              </div>
+            </div>
+            <div class="modelname hide" id="used_model">
+              <div class="">
+                <ul>
+                  <li class="" data-gsmtl-container="true">
+                    <div
+                      class="ReactTypeahead inputfield gs_ta customSelect"
+                      data-gsmtl-container="true"
+                    >
+                      <input
+                        type="text"
+                        id="ucModel"
+                        data-id="ucModel"
+                        name="undefined231137c336acf"
+                        maxlength="50"
+                        data-gsv-type="required"
+                        data-gsv-min-length="50"
+                        placeholder="Select Model"
+                        aria-label="Select City"
+                        data-move-top="0"
+                        autocomplete="new-password"
+                        class=""
+                        value=""
+                      />
+                    </div>
+                  </li>
+                  <li class="" data-gsmtl-container="true">
+                    <div class="">
+                      <div class="posR">
+                        <i class="LocIcon zindex1 hide"></i
+                        ><i class="icon-cd-write-a-comment hide"></i>
+                        <div
+                          class="gs_ta smallInput"
+                          data-track-section="Search by city"
+                        >
+                          <div
+                            class="ReactTypeahead inputfield gs_ta customSelect"
+                            data-gsmtl-container="true"
+                          >
+                            <input
+                              type="text"
+                              id="ucMCity"
+                              data-id="ucMCity"
+                              name="cityName757965cc19887"
+                              maxlength="50"
+                              data-gsv-type="required"
+                              data-gsv-min-length="50"
+                              data-gsf-name="cityName"
+                              placeholder="Select City"
+                              data-type="cityName"
+                              aria-label="Select City"
+                              data-move-top="0"
+                              autocomplete="new-password"
+                              class=""
+                              value=""
+                            />
+                          </div>
+                          <div
+                            data-typeahead-container="ucMCity"
+                            class="typeHeadContainer gs_ta_header"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="">
+                    <button class="button" name="go" type="submit">
+                      Search
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <span
+              ><div class="nextgen">
+                <span></span></div
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
